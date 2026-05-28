@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>AI Loan Approval System</title>
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <div class="left-panel">
+
+        <div class="form-card">
+
+            <h1>
+                AI Loan Approval System
+            </h1>
+
+            <p class="subtitle">
+                Verify PAN and check loan eligibility
+            </p>
+
+            <form
+            action="/predict"
+            method="POST"
+            enctype="multipart/form-data">
+
+                <input
+                type="number"
+                name="income"
+                placeholder="Applicant Income"
+                required>
+
+                <input
+                type="number"
+                name="loan"
+                placeholder="Loan Amount"
+                required>
+
+                <select
+                name="self_employed"
+                required>
+
+                    <option value="">
+                        Select Employment Type
+                    </option>
+
+                    <option value="1">
+                        Self Employed
+                    </option>
+
+                    <option value="0">
+                        Salaried
+                    </option>
+
+                </select>
+
+                <input
+                type="number"
+                name="cibil"
+                placeholder="CIBIL Score"
+                required>
+
+                <label>
+                    Upload PAN Card
+                </label>
+
+                <input
+                type="file"
+                name="pan"
+                required>
+
+                <button type="submit">
+                    Verify & Predict
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="right-panel">
+
+        <div class="info-card">
+
+            <h2>
+                Smart Loan Verification
+            </h2>
+
+            <p>
+                AI-powered system for PAN verification
+                and loan eligibility prediction.
+            </p>
+
+            <ul>
+                <li>✔ PAN OCR Verification</li>
+                <li>✔ CIBIL Score Analysis</li>
+                <li>✔ ML Prediction</li>
+                <li>✔ Fast Loan Approval</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
