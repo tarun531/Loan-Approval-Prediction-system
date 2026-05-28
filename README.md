@@ -1,4 +1,4 @@
-# 🚀 AI Loan Approval Prediction System using PAN Verification & Machine Learning
+# 🚀 Loan Approval Prediction System using PAN Verification & Machine Learning
 
 ## 📌 Project Overview
 
